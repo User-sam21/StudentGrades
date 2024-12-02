@@ -103,3 +103,6 @@ C:\Users\Zahira\source\repos\StudentGrades\StudentGrades.nUnitTests\obj\Debug\ne
 C:\Users\Zahira\source\repos\StudentGrades\StudentGrades.nUnitTests\obj\Debug\net8.0\StudentGrades.nUnitTests.pdb
 C:\Users\Zahira\source\repos\StudentGrades\StudentGrades.nUnitTests\obj\Debug\net8.0\StudentGrades.nUnitTests.genruntimeconfig.cache
 C:\Users\Zahira\source\repos\StudentGrades\StudentGrades.nUnitTests\obj\Debug\net8.0\ref\StudentGrades.nUnitTests.dll
+D:\StudentGrades\StudentGrades\StudentGrades.nUnitTests\obj\Debug\net8.0\StudentGrades.nUnitTests.dll
+D:\StudentGrades\StudentGrades\StudentGrades.nUnitTests\obj\Debug\net8.0\refint\StudentGrades.nUnitTests.dll
+D:\StudentGrades\StudentGrades\StudentGrades.nUnitTests\obj\Debug\net8.0\StudentGrades.nUnitTests.pdb
