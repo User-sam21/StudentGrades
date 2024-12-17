@@ -9,7 +9,7 @@ pipeline {
         stage('Clone repository') {
             steps {
                 echo "Clonage du code source depuis Git"
-                git branch: 'master', url: 'https://github.com/<votre-username>/<votre-repo>.git'
+                git branch: 'master', url: 'https://github.com/User-sam21/StudentsGrades.git'
             }
         }
 
