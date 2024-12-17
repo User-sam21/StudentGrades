@@ -1,33 +1,18 @@
 <<<<<<< HEAD
-# Étape 1 : Build
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
-WORKDIR /app
+# Ã‰tape 1 : Build de l'application
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /src
 
-# Copier le fichier projet et restaurer les dépendances
-=======
-# Ã‰tape 1 : Build
-FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build-env
-WORKDIR /app
-
-# Copier le fichier projet et restaurer les dÃ©pendances
->>>>>>> d362ec593c5a804f2b9740b83f37056a38b9ba1d
-COPY *.csproj ./
+COPY . .
 RUN dotnet restore
+RUN dotnet publish -c Release -o /app
 
-# Copier tout le code source et construire l'application
-COPY . ./
-RUN dotnet publish -c Release -o out
-
-<<<<<<< HEAD
-# Étape 2 : Runtime
-=======
-# Ã‰tape 2 : Runtime
->>>>>>> d362ec593c5a804f2b9740b83f37056a38b9ba1d
-FROM mcr.microsoft.com/dotnet/aspnet:7.0
+# Ã‰tape 2 : Image finale
+FROM mcr.microsoft.com/dotnet/runtime:6.0
 WORKDIR /app
-COPY --from=build-env /app/out .
+COPY --from=build /app .
+
 ENTRYPOINT ["dotnet", "StudentGrades.dll"]
 <<<<<<< HEAD
 =======
  
->>>>>>> d362ec593c5a804f2b9740b83f37056a38b9ba1d
