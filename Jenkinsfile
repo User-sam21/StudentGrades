@@ -16,22 +16,22 @@ pipeline {
         stage('Build application') {
             steps {
                 echo "Compilation de l'application"
-                sh 'dotnet restore'
-                sh 'dotnet build --configuration Release'
+                bat 'dotnet restore'
+                bat 'dotnet build --configuration Release'
             }
         }
 
         stage('Run Unit Tests') {
             steps {
                 echo "Exécution des tests unitaires"
-                sh 'dotnet test --configuration Release --no-build'
+                bat 'dotnet test --configuration Release --no-build'
             }
         }
 
         stage('Dockerize Application') {
             steps {
                 echo "Création de l'image Docker"
-                sh '''
+                bat '''
                 docker build -t $DOCKER_IMAGE .
                 docker images
                 '''
